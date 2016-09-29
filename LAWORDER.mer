@@ -1,0 +1,1346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ERDiagram version="1.1">
+  <Connection session="thin1" database="LAWORDER" />
+  <Drawing gridVisible="false" snapOn="false" fastRouting="false" labelsVisible="true" />
+  <Tables>
+    <Table name="ADDRESS">
+      <Drawing expanded="true" location="1746,1698" dimensions="192,168" />
+      <Columns>
+        <Column name="LOGINID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="ADDRESSID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="PHONENO" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="10" />
+        </Column>
+        <Column name="STREET" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="HOUSENO" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="COUNTRY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="PINCODE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="CHARGESHEET">
+      <Drawing expanded="true" location="267,1232" dimensions="219,128" />
+      <Columns>
+        <Column name="FIRID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="DOR" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="CHARGESHEETID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="DESCRIPTION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="WITTNESS" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="CITIZEN">
+      <Drawing expanded="true" location="1997,1568" dimensions="225,164" />
+      <Columns>
+        <Column name="LOGINID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="PSID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="STATEID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="DISTRICTID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="CITIZENID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="IDENTIFICATIONNO" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="CITYID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="CITYDETAILS">
+      <Drawing expanded="true" location="1616,1963" dimensions="185,107" />
+      <Columns>
+        <Column name="CITYID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="CITYNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="STATEID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="DISTRICTID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="CRIMINALDETAILS">
+      <Drawing expanded="true" location="528,1208" dimensions="211,443" />
+      <Columns>
+        <Column name="ACCUID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="NAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="FATHER" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="GENDER" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="10" />
+        </Column>
+        <Column name="RELIGION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="APPROXAGE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="3" />
+        </Column>
+        <Column name="APPHEIGHT" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="COMPLEXION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="CRIME_ACTIVITY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="IDMARK1" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="IDMARK2" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="AREA" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="ADDRESS" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="STATEID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="DISTRICTID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="PHOTO" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="BLOB" size="4000" />
+        </Column>
+        <Column name="WANTED" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="FIRREFID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="CITYID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="SINAME" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="PSID" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="DEPARTMENT">
+      <Drawing expanded="true" location="811,1950" dimensions="180,88" />
+      <Columns>
+        <Column name="DEPTID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="PSID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="DEPTNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="DETECTIVE">
+      <Drawing expanded="true" location="1150,1381" dimensions="199,87" />
+      <Columns>
+        <Column name="LOGINID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="DETECTIVEID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="PSID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="DGDETAILS">
+      <Drawing expanded="true" location="1917,2059" dimensions="196,203" />
+      <Columns>
+        <Column name="DGID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="LOGINID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="STATEID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="DISTRICTID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="PSID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="DESIGNATION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="HIREDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="ADDRESSID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="CITYID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="DISTRICTMASTER">
+      <Drawing expanded="true" location="1340,2262" dimensions="202,108" />
+      <Columns>
+        <Column name="STATEID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="DISTRICTID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="DISTRICTNAME" primary_key="false" foreign_key="false" required="false" unique="true">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="COUNTRY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="EMPLOYEE">
+      <Drawing expanded="true" location="1190,1133" dimensions="204,222" />
+      <Columns>
+        <Column name="LOGINID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="EMPLOYEEID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="PSID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="STATEID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="DISTRICT_ID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="DEPARTMENTID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="DESIGNATION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="HIREDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="ADDRESSED" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="CITYID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="FIR">
+      <Drawing expanded="true" location="533,1757" dimensions="214,324" />
+      <Columns>
+        <Column name="FIRID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="STATEID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="DISTRICTID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="PSID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="FILLEDDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="FILLEDTIME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="OFFENCETYPE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="PLACE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="WHEN" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="ACCUSEDPERSON" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="ADDRESS" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="MOBILE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="TRUEFACTS" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="CITYID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="DEPTID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="HIGHEREMPLOYEE">
+      <Drawing expanded="true" location="869,1506" dimensions="206,184" />
+      <Columns>
+        <Column name="HIGHEREMPID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="LOGINID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="PSID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="STATEID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="DISTRICTID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="DESIGNATION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="HIREDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="DEPARTMENTID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="INBOXDETAILS">
+      <Drawing expanded="true" location="1846,1407" dimensions="192,147" />
+      <Columns>
+        <Column name="MESSAGEID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="FROMMAILID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="TOMAILID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="MAILSUB" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="MAILBODY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="MAILDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="LICENCE">
+      <Drawing expanded="true" location="768,1184" dimensions="195,207" />
+      <Columns>
+        <Column name="LID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="LICENCETYPE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="DESCRIPTION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="DOR" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="PSID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="PLACE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="LOGINID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="STATUS" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="IDPROOF" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="BLOB" size="4000" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="OUTBOX">
+      <Drawing expanded="true" location="1431,1102" dimensions="192,147" />
+      <Columns>
+        <Column name="MESSAGEID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="FROMMAILID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="TOMAILID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="MAILSUB" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="MAILBODY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="MAILDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="POLICESTATION">
+      <Drawing expanded="true" location="1132,1778" dimensions="216,267" />
+      <Columns>
+        <Column name="PSID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="STATEID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="DISTRICTID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="PSNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+        <Column name="COUNTRY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="AREAOFCONTROL" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="PLACE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="NOOFEMPLOYEE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="8" />
+        </Column>
+        <Column name="PHONENO" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="10" />
+        </Column>
+        <Column name="ADDRESS" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="DOR" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="CITYID" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="SIDETAILS">
+      <Drawing expanded="true" location="1945,1190" dimensions="196,203" />
+      <Columns>
+        <Column name="SIID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="LOGINID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="STATEID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="DISTRICTID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="PSID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="DESIGNATION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="HIREDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="ADDRESSID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="CITYID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="SPDETAILS">
+      <Drawing expanded="true" location="958,2209" dimensions="196,203" />
+      <Columns>
+        <Column name="SPID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="LOGINID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="STATEID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="DISTRICTID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="PSID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="DESIGNATION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="HIREDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="ADDRESSID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="CITYID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="STATEMASTER">
+      <Drawing expanded="true" location="1714,2285" dimensions="186,89" />
+      <Columns>
+        <Column name="STATEID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="STATENAME" primary_key="false" foreign_key="false" required="false" unique="true">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="COUNTRY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="25" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="USERAUTHDETAILS">
+      <Drawing expanded="true" location="1430,1541" dimensions="192,249" />
+      <Columns>
+        <Column name="LOGINID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="PASSWORD" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="LOGINTYPE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="FIRSTNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="MIDDLENAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="LASTNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="EMAIL" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="DOB" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="PHOTO" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="BLOB" size="4000" />
+        </Column>
+        <Column name="GENDER" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="STATUS" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+  </Tables>
+  <Relationships>
+    <Relationship name="ADDRESS_R01_FK">
+      <Details primary_table="USERAUTHDETAILS" foreign_table="ADDRESS">
+        <PrimaryKeys>
+          <ColumnName name="LOGINID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="LOGINID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="CHARGESHEET_R01_FK">
+      <Details primary_table="FIR" foreign_table="CHARGESHEET">
+        <PrimaryKeys>
+          <ColumnName name="FIRID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="FIRID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="CITIZEN_R01_FK">
+      <Details primary_table="USERAUTHDETAILS" foreign_table="CITIZEN">
+        <PrimaryKeys>
+          <ColumnName name="LOGINID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="LOGINID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="CITIZEN_R01_FK4">
+      <Details primary_table="POLICESTATION" foreign_table="CITIZEN">
+        <PrimaryKeys>
+          <ColumnName name="PSID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="PSID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="1">
+        <Bendpoints>
+          <Point location="2108,3049" />
+          <Point location="1320,3043" />
+        </Bendpoints>
+      </Drawing>
+    </Relationship>
+    <Relationship name="CITIZEN_R01_FK5">
+      <Details primary_table="STATEMASTER" foreign_table="CITIZEN">
+        <PrimaryKeys>
+          <ColumnName name="STATEID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="STATEID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="CITIZEN_R01_FK2">
+      <Details primary_table="DISTRICTMASTER" foreign_table="CITIZEN">
+        <PrimaryKeys>
+          <ColumnName name="DISTRICTID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="DISTRICTID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="1">
+        <Bendpoints>
+          <Point location="2146,2964" />
+          <Point location="1494,2944" />
+        </Bendpoints>
+      </Drawing>
+    </Relationship>
+    <Relationship name="CITIZEN_R01_FK1">
+      <Details primary_table="CITYDETAILS" foreign_table="CITIZEN">
+        <PrimaryKeys>
+          <ColumnName name="CITYID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="CITYID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="CITYDETAILS_R01_FK2">
+      <Details primary_table="STATEMASTER" foreign_table="CITYDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="STATEID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="STATEID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="CITYDETAILS_R01_FK1">
+      <Details primary_table="DISTRICTMASTER" foreign_table="CITYDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="DISTRICTID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="DISTRICTID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="CRIMINALDETAILS_R01_FK6">
+      <Details primary_table="POLICESTATION" foreign_table="CRIMINALDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="PSID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="PSID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="CRIMINALDETAILS_R01_FK5">
+      <Details primary_table="USERAUTHDETAILS" foreign_table="CRIMINALDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="LOGINID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="SINAME" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="CRIMINALDETAILS_R01_FK4">
+      <Details primary_table="CITYDETAILS" foreign_table="CRIMINALDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="CITYID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="CITYID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="1">
+        <Bendpoints>
+          <Point location="772,1037" />
+          <Point location="2270,1023" />
+          <Point location="2383,1988" />
+        </Bendpoints>
+      </Drawing>
+    </Relationship>
+    <Relationship name="CRIMINALDETAILS_R01_FK3">
+      <Details primary_table="FIR" foreign_table="CRIMINALDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="FIRID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="FIRREFID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="CRIMINALDETAILS_R01_FK2">
+      <Details primary_table="STATEMASTER" foreign_table="CRIMINALDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="STATEID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="STATEID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="CRIMINALDETAILS_R01_FK1">
+      <Details primary_table="DISTRICTMASTER" foreign_table="CRIMINALDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="DISTRICTID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="DISTRICTID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="1">
+        <Bendpoints>
+          <Point location="266,1498" />
+          <Point location="224,2721" />
+          <Point location="1471,2720" />
+        </Bendpoints>
+      </Drawing>
+    </Relationship>
+    <Relationship name="DEPARTMENT_R01_FK1">
+      <Details primary_table="POLICESTATION" foreign_table="DEPARTMENT">
+        <PrimaryKeys>
+          <ColumnName name="PSID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="PSID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="DETECTIVE_R01_FK2">
+      <Details primary_table="POLICESTATION" foreign_table="DETECTIVE">
+        <PrimaryKeys>
+          <ColumnName name="PSID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="PSID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="DETECTIVE_R01_FK1">
+      <Details primary_table="USERAUTHDETAILS" foreign_table="DETECTIVE">
+        <PrimaryKeys>
+          <ColumnName name="LOGINID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="LOGINID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="DGDETAILS_R01_FK1">
+      <Details primary_table="ADDRESS" foreign_table="DGDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="ADDRESSID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="ADDRESSID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="DGDETAILS_R01_FK3">
+      <Details primary_table="DISTRICTMASTER" foreign_table="DGDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="DISTRICTID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="DISTRICTID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="DGDETAILS_R01_FK2">
+      <Details primary_table="CITYDETAILS" foreign_table="DGDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="CITYID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="CITYID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="DGDETAILS_R01_FK5">
+      <Details primary_table="POLICESTATION" foreign_table="DGDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="PSID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="PSID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="1">
+        <Bendpoints>
+          <Point location="1893,2997" />
+          <Point location="1348,2991" />
+        </Bendpoints>
+      </Drawing>
+    </Relationship>
+    <Relationship name="DGDETAILS_R01_FK4">
+      <Details primary_table="USERAUTHDETAILS" foreign_table="DGDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="LOGINID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="LOGINID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="DGDETAILS_R01_FK6">
+      <Details primary_table="STATEMASTER" foreign_table="DGDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="STATEID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="STATEID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="DISTRICTMASTER_R01_FK1">
+      <Details primary_table="STATEMASTER" foreign_table="DISTRICTMASTER">
+        <PrimaryKeys>
+          <ColumnName name="STATEID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="STATEID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="EMPLOYEE_R01_ADDESSS_FK">
+      <Details primary_table="ADDRESS" foreign_table="EMPLOYEE">
+        <PrimaryKeys>
+          <ColumnName name="ADDRESSID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="ADDRESSED" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="EMPLOYEE_R01_FK5">
+      <Details primary_table="USERAUTHDETAILS" foreign_table="EMPLOYEE">
+        <PrimaryKeys>
+          <ColumnName name="LOGINID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="LOGINID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="EMPLOYEE_R01_FK4">
+      <Details primary_table="POLICESTATION" foreign_table="EMPLOYEE">
+        <PrimaryKeys>
+          <ColumnName name="PSID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="PSID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="EMPLOYEE_R01_CITY_FK">
+      <Details primary_table="CITYDETAILS" foreign_table="EMPLOYEE">
+        <PrimaryKeys>
+          <ColumnName name="CITYID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="CITYID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="EMPLOYEE_R01_FK1">
+      <Details primary_table="DEPARTMENT" foreign_table="EMPLOYEE">
+        <PrimaryKeys>
+          <ColumnName name="DEPTID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="DEPARTMENTID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="EMPLOYEE_R01_FK3">
+      <Details primary_table="STATEMASTER" foreign_table="EMPLOYEE">
+        <PrimaryKeys>
+          <ColumnName name="STATEID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="STATEID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="1">
+        <Bendpoints>
+          <Point location="1291,1080" />
+          <Point location="2226,1083" />
+          <Point location="2311,2329" />
+        </Bendpoints>
+      </Drawing>
+    </Relationship>
+    <Relationship name="EMPLOYEE_R01_FK2">
+      <Details primary_table="DISTRICTMASTER" foreign_table="EMPLOYEE">
+        <PrimaryKeys>
+          <ColumnName name="DISTRICTID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="DISTRICT_ID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="1">
+        <Bendpoints>
+          <Point location="204,1175" />
+          <Point location="194,2186" />
+          <Point location="1364,2175" />
+        </Bendpoints>
+      </Drawing>
+    </Relationship>
+    <Relationship name="FIR_R01_FK1">
+      <Details primary_table="DISTRICTMASTER" foreign_table="FIR">
+        <PrimaryKeys>
+          <ColumnName name="DISTRICTID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="DISTRICTID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FIR_R01_FK2">
+      <Details primary_table="STATEMASTER" foreign_table="FIR">
+        <PrimaryKeys>
+          <ColumnName name="STATEID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="STATEID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="1">
+        <Bendpoints>
+          <Point location="782,2860" />
+          <Point location="1777,2871" />
+        </Bendpoints>
+      </Drawing>
+    </Relationship>
+    <Relationship name="FIR_R01_FK3">
+      <Details primary_table="POLICESTATION" foreign_table="FIR">
+        <PrimaryKeys>
+          <ColumnName name="PSID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="PSID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FIR_R01_FK4">
+      <Details primary_table="CITYDETAILS" foreign_table="FIR">
+        <PrimaryKeys>
+          <ColumnName name="CITYID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="CITYID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="1">
+        <Bendpoints>
+          <Point location="898,2491" />
+          <Point location="1565,2519" />
+        </Bendpoints>
+      </Drawing>
+    </Relationship>
+    <Relationship name="FIR_R01_FK5">
+      <Details primary_table="DEPARTMENT" foreign_table="FIR">
+        <PrimaryKeys>
+          <ColumnName name="DEPTID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="DEPTID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="HIGHEREMPLOYEE_R01_FK">
+      <Details primary_table="DEPARTMENT" foreign_table="HIGHEREMPLOYEE">
+        <PrimaryKeys>
+          <ColumnName name="DEPTID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="DEPARTMENTID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="HIGHEREMPLOYEE_R01_FK1">
+      <Details primary_table="DISTRICTMASTER" foreign_table="HIGHEREMPLOYEE">
+        <PrimaryKeys>
+          <ColumnName name="DISTRICTID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="DISTRICTID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="HIGHEREMPLOYEE_R01_FK3">
+      <Details primary_table="POLICESTATION" foreign_table="HIGHEREMPLOYEE">
+        <PrimaryKeys>
+          <ColumnName name="PSID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="PSID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="HIGHEREMPLOYEE_R01_FK2">
+      <Details primary_table="USERAUTHDETAILS" foreign_table="HIGHEREMPLOYEE">
+        <PrimaryKeys>
+          <ColumnName name="LOGINID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="LOGINID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="HIGHEREMPLOYEE_R01_FK5">
+      <Details primary_table="STATEMASTER" foreign_table="HIGHEREMPLOYEE">
+        <PrimaryKeys>
+          <ColumnName name="STATEID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="STATEID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="1">
+        <Bendpoints>
+          <Point location="783,1598" />
+          <Point location="833,2809" />
+          <Point location="1865,2787" />
+        </Bendpoints>
+      </Drawing>
+    </Relationship>
+    <Relationship name="INBOXDETAILS_R01_FK2">
+      <Details primary_table="USERAUTHDETAILS" foreign_table="INBOXDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="LOGINID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="TOMAILID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="INBOXDETAILS_R01_FK1">
+      <Details primary_table="USERAUTHDETAILS" foreign_table="INBOXDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="LOGINID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="FROMMAILID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="LICENCE_R01_FK2">
+      <Details primary_table="USERAUTHDETAILS" foreign_table="LICENCE">
+        <PrimaryKeys>
+          <ColumnName name="LOGINID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="LOGINID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="LICENCE_R01_FK1">
+      <Details primary_table="POLICESTATION" foreign_table="LICENCE">
+        <PrimaryKeys>
+          <ColumnName name="PSID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="PSID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="OUTBOX_R01_FK1">
+      <Details primary_table="USERAUTHDETAILS" foreign_table="OUTBOX">
+        <PrimaryKeys>
+          <ColumnName name="LOGINID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="FROMMAILID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="OUTBOX_R01_FK2">
+      <Details primary_table="USERAUTHDETAILS" foreign_table="OUTBOX">
+        <PrimaryKeys>
+          <ColumnName name="LOGINID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="TOMAILID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="POLICESTATION_R01_FK2">
+      <Details primary_table="DISTRICTMASTER" foreign_table="POLICESTATION">
+        <PrimaryKeys>
+          <ColumnName name="DISTRICTID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="DISTRICTID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="POLICESTATION_R01_FK">
+      <Details primary_table="STATEMASTER" foreign_table="POLICESTATION">
+        <PrimaryKeys>
+          <ColumnName name="STATEID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="STATEID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="1">
+        <Bendpoints>
+          <Point location="1290,2907" />
+          <Point location="1833,2902" />
+        </Bendpoints>
+      </Drawing>
+    </Relationship>
+    <Relationship name="SIDETAILS_R01_FK5">
+      <Details primary_table="POLICESTATION" foreign_table="SIDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="PSID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="PSID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="1">
+        <Bendpoints>
+          <Point location="2473,1291" />
+          <Point location="2458,1890" />
+        </Bendpoints>
+      </Drawing>
+    </Relationship>
+    <Relationship name="SIDETAILS_R01_FK4">
+      <Details primary_table="USERAUTHDETAILS" foreign_table="SIDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="LOGINID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="LOGINID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="SIDETAILS_R01_FK6">
+      <Details primary_table="STATEMASTER" foreign_table="SIDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="STATEID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="STATEID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="SIDETAILS_R01_FK2">
+      <Details primary_table="CITYDETAILS" foreign_table="SIDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="CITYID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="CITYID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="SIDETAILS_R01_FK3">
+      <Details primary_table="DISTRICTMASTER" foreign_table="SIDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="DISTRICTID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="DISTRICTID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="1">
+        <Bendpoints>
+          <Point location="2264,1263" />
+          <Point location="2036,3031" />
+          <Point location="1421,3043" />
+        </Bendpoints>
+      </Drawing>
+    </Relationship>
+    <Relationship name="SIDETAILS_R01_FK1">
+      <Details primary_table="ADDRESS" foreign_table="SIDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="ADDRESSID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="ADDRESSID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="SPDETAILS_R01_FK1">
+      <Details primary_table="ADDRESS" foreign_table="SPDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="ADDRESSID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="ADDRESSID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="SPDETAILS_R01_FK4">
+      <Details primary_table="USERAUTHDETAILS" foreign_table="SPDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="LOGINID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="LOGINID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="SPDETAILS_R01_FK5">
+      <Details primary_table="POLICESTATION" foreign_table="SPDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="PSID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="PSID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="SPDETAILS_R01_FK2">
+      <Details primary_table="CITYDETAILS" foreign_table="SPDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="CITYID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="CITYID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="SPDETAILS_R01_FK3">
+      <Details primary_table="DISTRICTMASTER" foreign_table="SPDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="DISTRICTID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="DISTRICTID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="SPDETAILS_R01_FK6">
+      <Details primary_table="STATEMASTER" foreign_table="SPDETAILS">
+        <PrimaryKeys>
+          <ColumnName name="STATEID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="STATEID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+  </Relationships>
+</ERDiagram>
+

@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_CpI2oEByEeKtXr-ioGRIjQ">
+  <name xsi:nil="true"/>
+  <elementImport xmi:id="_CrrNm0ByEeKtXr-ioGRIjQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_Cr-IMEByEeKtXr-ioGRIjQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_Cr-IMUByEeKtXr-ioGRIjQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_CpI2oUByEeKtXr-ioGRIjQ" name="com">
+    <packagedElement xmi:type="uml:Package" xmi:id="_CpI2okByEeKtXr-ioGRIjQ" name="laoa">
+      <packagedElement xmi:type="uml:Package" xmi:id="_CplikEByEeKtXr-ioGRIjQ" name="dbutil"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_Cq6_X0ByEeKtXr-ioGRIjQ" name="daoI">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_YEByEeKtXr-ioGRIjQ" name="CriminalDaoI"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_a0ByEeKtXr-ioGRIjQ" name="SecurityDaoI"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_bEByEeKtXr-ioGRIjQ" name="MailsDaoI"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_bkByEeKtXr-ioGRIjQ" name="StateDaoI"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_b0ByEeKtXr-ioGRIjQ" name="PoliceDaoI"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_Cq6_YUByEeKtXr-ioGRIjQ" name="form">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_YkByEeKtXr-ioGRIjQ" name="CriminalTo"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_Y0ByEeKtXr-ioGRIjQ" name="PoliceTo"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_ZEByEeKtXr-ioGRIjQ" name="ProfileTo"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_bUByEeKtXr-ioGRIjQ" name="MailsTo"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_Cq6_ZUByEeKtXr-ioGRIjQ" name="util">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_ZkByEeKtXr-ioGRIjQ" name="DateWrapper"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_Z0ByEeKtXr-ioGRIjQ" name="SqlConstant"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_dEByEeKtXr-ioGRIjQ" name="LoggerManager"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_Cq6_cEByEeKtXr-ioGRIjQ" name="delegate">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_cUByEeKtXr-ioGRIjQ" name="MailsDelegate"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_CpI2o0ByEeKtXr-ioGRIjQ" name="daoImpl">
+        <packagedElement xmi:type="uml:Class" xmi:id="_CpI2pEByEeKtXr-ioGRIjQ" name="CriminalDaoImpl">
+          <generalization xmi:id="_Cq6_dUByEeKtXr-ioGRIjQ" general="_CplikUByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_Cq6_dkByEeKtXr-ioGRIjQ" name="con" visibility="package" type="_Cq6_WEByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_CrEwUEByEeKtXr-ioGRIjQ" name="pstmt" visibility="package" type="_Cq6_WUByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_CrEwUUByEeKtXr-ioGRIjQ" name="rs" visibility="package" type="_Cq6_WkByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_Cr0XMEByEeKtXr-ioGRIjQ" name="flag" visibility="package">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_Cr0XMUByEeKtXr-ioGRIjQ"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_Cr0XMkByEeKtXr-ioGRIjQ" name="AddCriminal" visibility="public">
+            <ownedParameter xmi:id="_Cr0XM0ByEeKtXr-ioGRIjQ" name="pt" type="_Cq6_ZEByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_Cr0XNEByEeKtXr-ioGRIjQ" name="po" type="_Cq6_Y0ByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_Cr0XNUByEeKtXr-ioGRIjQ" name="ct" type="_Cq6_YkByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_Cr0XNkByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_Cr-IMkByEeKtXr-ioGRIjQ" name="ViewCriminalDetails" visibility="public">
+            <ownedParameter xmi:id="_Cr-IM0ByEeKtXr-ioGRIjQ" name="realpath">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_Cr-INEByEeKtXr-ioGRIjQ" name="stateid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_Cr-INUByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XUByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_Cr-INkByEeKtXr-ioGRIjQ" name="ViewCriminalDetails" visibility="public">
+            <ownedParameter xmi:id="_Cr-IN0ByEeKtXr-ioGRIjQ" name="accuid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_Cr-IOEByEeKtXr-ioGRIjQ" name="realpath">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_Cr-IOUByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XUByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_CsHSIEByEeKtXr-ioGRIjQ" name="ViewCriminalDetails" visibility="public">
+            <ownedParameter xmi:id="_CsHSIUByEeKtXr-ioGRIjQ" name="realpath">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_CsHSIkByEeKtXr-ioGRIjQ" name="area">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_CsHSI0ByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XUByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_CsHSJEByEeKtXr-ioGRIjQ" name="ViewCriminal" visibility="public">
+            <ownedParameter xmi:id="_CsHSJUByEeKtXr-ioGRIjQ" name="realpath">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_CsHSJkByEeKtXr-ioGRIjQ" name="fromage">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_CsHSJ0ByEeKtXr-ioGRIjQ" name="toage">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_CsHSKEByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XUByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_CpI2pUByEeKtXr-ioGRIjQ" name="SecurityDaoImpl">
+          <generalization xmi:id="_CsHSKUByEeKtXr-ioGRIjQ" general="_CplikUByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_Csa0IEByEeKtXr-ioGRIjQ" name="con" visibility="package" type="_Cq6_WEByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_Cs3gEEByEeKtXr-ioGRIjQ" name="rs" visibility="package" type="_Cq6_WkByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_CtdV8EByEeKtXr-ioGRIjQ" name="rs1" visibility="package" type="_Cq6_WkByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_CuDy4EByEeKtXr-ioGRIjQ" name="rs2" visibility="package" type="_Cq6_WkByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_Cuf3wEByEeKtXr-ioGRIjQ" name="stmt" visibility="package" type="_Cq6_aUByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_CvGUsEByEeKtXr-ioGRIjQ" name="pstmt" visibility="package" type="_Cq6_WUByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_CvjAoEByEeKtXr-ioGRIjQ" name="cstmt" visibility="package" type="_Cq6_aEByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_CwI2gEByEeKtXr-ioGRIjQ" name="flag" visibility="package">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_CwI2gUByEeKtXr-ioGRIjQ"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_CwlicEByEeKtXr-ioGRIjQ" name="pstmt1" visibility="package" type="_Cq6_WUByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_CxL_YEByEeKtXr-ioGRIjQ" name="pstmt2" visibility="package" type="_Cq6_WUByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_CxorUEByEeKtXr-ioGRIjQ" name="pstmt3" visibility="package" type="_Cq6_WUByEeKtXr-ioGRIjQ"/>
+          <ownedOperation xmi:id="_Cx7mQEByEeKtXr-ioGRIjQ" name="logincheck" visibility="public">
+            <ownedParameter xmi:id="_Cx7mQUByEeKtXr-ioGRIjQ" name="pt" type="_Cq6_ZEByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_Cx7mQkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_CyOhMEByEeKtXr-ioGRIjQ" name="AddEmployee" visibility="public">
+            <ownedParameter xmi:id="_CyOhMUByEeKtXr-ioGRIjQ" name="pt" type="_Cq6_ZEByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_CyOhMkByEeKtXr-ioGRIjQ" name="po" type="_Cq6_Y0ByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_CyOhM0ByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_CyhcIEByEeKtXr-ioGRIjQ" name="AddDetective" visibility="public">
+            <ownedParameter xmi:id="_CyhcIUByEeKtXr-ioGRIjQ" name="pt" type="_Cq6_ZEByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_CyhcIkByEeKtXr-ioGRIjQ" name="po" type="_Cq6_Y0ByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_CyhcI0ByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_Cy0-IEByEeKtXr-ioGRIjQ" name="AddCitizen" visibility="public">
+            <ownedParameter xmi:id="_Cy0-IUByEeKtXr-ioGRIjQ" name="pt" type="_Cq6_ZEByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_Cy0-IkByEeKtXr-ioGRIjQ" name="po" type="_Cq6_Y0ByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_Cy0-I0ByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_Cy-IEEByEeKtXr-ioGRIjQ" name="viewUser" visibility="public">
+            <ownedParameter xmi:id="_Cy-IEUByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_CzRDAEByEeKtXr-ioGRIjQ" name="ViewEmployee" visibility="public">
+            <ownedParameter xmi:id="_CzRDAUByEeKtXr-ioGRIjQ" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_CzRDAkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XUByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_CzklAEByEeKtXr-ioGRIjQ" name="updateEmployee" visibility="public">
+            <ownedParameter xmi:id="_CzklAUByEeKtXr-ioGRIjQ" name="pt" type="_Cq6_ZEByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_CzklAkByEeKtXr-ioGRIjQ" name="po" type="_Cq6_Y0ByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_CzklA0ByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_Cz3f8EByEeKtXr-ioGRIjQ" name="ViewCitizen" visibility="public">
+            <ownedParameter xmi:id="_Cz3f8UByEeKtXr-ioGRIjQ" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_Cz3f8kByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XUByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C0BQ8EByEeKtXr-ioGRIjQ" name="updateCitizen" visibility="public">
+            <ownedParameter xmi:id="_C0BQ8UByEeKtXr-ioGRIjQ" name="pt" type="_Cq6_ZEByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_C0BQ8kByEeKtXr-ioGRIjQ" name="po" type="_Cq6_Y0ByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_C0BQ80ByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C0dV0EByEeKtXr-ioGRIjQ" name="ViewDetective" visibility="public">
+            <ownedParameter xmi:id="_C0dV0UByEeKtXr-ioGRIjQ" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C0dV0kByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XUByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C0nG0EByEeKtXr-ioGRIjQ" name="changePass" visibility="public">
+            <ownedParameter xmi:id="_C0nG0UByEeKtXr-ioGRIjQ" name="pt" type="_Cq6_ZEByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_C0nG0kByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C06BwEByEeKtXr-ioGRIjQ" name="AddHigherEmployee" visibility="public">
+            <ownedParameter xmi:id="_C06BwUByEeKtXr-ioGRIjQ" name="pt" type="_Cq6_ZEByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_C06BwkByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C1NjwEByEeKtXr-ioGRIjQ" name="ViewHigherEmployee" visibility="public">
+            <ownedParameter xmi:id="_C1NjwUByEeKtXr-ioGRIjQ" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C1NjwkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C1gesEByEeKtXr-ioGRIjQ" name="updateHigherEmployee" visibility="public">
+            <ownedParameter xmi:id="_C1gesUByEeKtXr-ioGRIjQ" name="pt" type="_Cq6_ZEByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_C1geskByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C1zZoEByEeKtXr-ioGRIjQ" name="AddSI" visibility="public">
+            <ownedParameter xmi:id="_C1zZoUByEeKtXr-ioGRIjQ" name="pt" type="_Cq6_ZEByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_C1zZokByEeKtXr-ioGRIjQ" name="po" type="_Cq6_Y0ByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_C1zZo0ByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C2GUkEByEeKtXr-ioGRIjQ" name="AddSP" visibility="public">
+            <ownedParameter xmi:id="_C2GUkUByEeKtXr-ioGRIjQ" name="pt" type="_Cq6_ZEByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_C2GUkkByEeKtXr-ioGRIjQ" name="po" type="_Cq6_Y0ByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_C2GUk0ByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C2QFkEByEeKtXr-ioGRIjQ" name="AddDG" visibility="public">
+            <ownedParameter xmi:id="_C2QFkUByEeKtXr-ioGRIjQ" name="pt" type="_Cq6_ZEByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_C2QFkkByEeKtXr-ioGRIjQ" name="po" type="_Cq6_Y0ByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_C2QFk0ByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C2jAgEByEeKtXr-ioGRIjQ" name="ViewAllDG" visibility="public">
+            <ownedParameter xmi:id="_C2jAgUByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C217cEByEeKtXr-ioGRIjQ" name="ViewAllSP" visibility="public">
+            <ownedParameter xmi:id="_C217cUByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C3JdcEByEeKtXr-ioGRIjQ" name="ViewAllSI" visibility="public">
+            <ownedParameter xmi:id="_C3JdcUByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XUByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C3cYYEByEeKtXr-ioGRIjQ" name="ViewDGInfo" visibility="public">
+            <ownedParameter xmi:id="_C3cYYUByEeKtXr-ioGRIjQ" name="dgid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C3cYYkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C3mJYEByEeKtXr-ioGRIjQ" name="updateDG" visibility="public">
+            <ownedParameter xmi:id="_C3mJYUByEeKtXr-ioGRIjQ" name="pt" type="_Cq6_ZEByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_C3mJYkByEeKtXr-ioGRIjQ" name="dgid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C3mJY0ByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C4COQEByEeKtXr-ioGRIjQ" name="updateSP" visibility="public">
+            <ownedParameter xmi:id="_C4COQUByEeKtXr-ioGRIjQ" name="pt" type="_Cq6_ZEByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_C4COQkByEeKtXr-ioGRIjQ" name="spid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C4COQ0ByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C4VwQEByEeKtXr-ioGRIjQ" name="ViewSPInfo" visibility="public">
+            <ownedParameter xmi:id="_C4VwQUByEeKtXr-ioGRIjQ" name="spid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C4VwQkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C4e6MEByEeKtXr-ioGRIjQ" name="ViewSIInfo" visibility="public">
+            <ownedParameter xmi:id="_C4e6MUByEeKtXr-ioGRIjQ" name="siid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C4e6MkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C4ycMEByEeKtXr-ioGRIjQ" name="updateSI" visibility="public">
+            <ownedParameter xmi:id="_C4ycMUByEeKtXr-ioGRIjQ" name="pt" type="_Cq6_ZEByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_C4ycMkByEeKtXr-ioGRIjQ" name="siid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C4ycM0ByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C5FXIEByEeKtXr-ioGRIjQ" name="ViewSPInfoByDG" visibility="public">
+            <ownedParameter xmi:id="_C5FXIUByEeKtXr-ioGRIjQ" name="districtid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C5FXIkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C5YSEEByEeKtXr-ioGRIjQ" name="ViewSIByArea" visibility="public">
+            <ownedParameter xmi:id="_C5YSEUByEeKtXr-ioGRIjQ" name="area">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C5YSEkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XUByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C5rNAEByEeKtXr-ioGRIjQ" name="ViewDGProfile" visibility="public">
+            <ownedParameter xmi:id="_C5rNAUByEeKtXr-ioGRIjQ" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C5rNAkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XUByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C50-AEByEeKtXr-ioGRIjQ" name="ViewSIProfile" visibility="public">
+            <ownedParameter xmi:id="_C50-AUByEeKtXr-ioGRIjQ" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C50-AkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XUByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C6H48EByEeKtXr-ioGRIjQ" name="ViewConstebleInfoPSIDWise" visibility="public">
+            <ownedParameter xmi:id="_C6H48UByEeKtXr-ioGRIjQ" name="stationid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C6H48kByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C6az4EByEeKtXr-ioGRIjQ" name="ViewSPinDistrict" visibility="public">
+            <ownedParameter xmi:id="_C6az4UByEeKtXr-ioGRIjQ" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C6az4kByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C6uV4EByEeKtXr-ioGRIjQ" name="ViewSIinDistrict" visibility="public">
+            <ownedParameter xmi:id="_C6uV4UByEeKtXr-ioGRIjQ" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C6uV4kByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XUByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C7BQ0EByEeKtXr-ioGRIjQ" name="ViewDGinState" visibility="public">
+            <ownedParameter xmi:id="_C7BQ0UByEeKtXr-ioGRIjQ" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C7BQ0kByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C7ULwEByEeKtXr-ioGRIjQ" name="ViewConstebleinps" visibility="public">
+            <ownedParameter xmi:id="_C7ULwUByEeKtXr-ioGRIjQ" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C7ULwkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XUByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C7nGsEByEeKtXr-ioGRIjQ" name="ViewSPtoCitizen" visibility="public">
+            <ownedParameter xmi:id="_C7nGsUByEeKtXr-ioGRIjQ" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C7nGskByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C76osEByEeKtXr-ioGRIjQ" name="ViewSPtoSI" visibility="public">
+            <ownedParameter xmi:id="_C76osUByEeKtXr-ioGRIjQ" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C76oskByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C8DyoEByEeKtXr-ioGRIjQ" name="ViewDGToSI" visibility="public">
+            <ownedParameter xmi:id="_C8DyoUByEeKtXr-ioGRIjQ" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C8DyokByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_7H3BEEByEeKtXr-ioGRIjQ" name="Operation1"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_CpbxkEByEeKtXr-ioGRIjQ" name="MailsDaoImpl">
+          <generalization xmi:id="_C8XUoEByEeKtXr-ioGRIjQ" general="_CplikUByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_C8XUoUByEeKtXr-ioGRIjQ" name="con" visibility="package" type="_Cq6_WEByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_C8gekEByEeKtXr-ioGRIjQ" name="pstmt" visibility="package" type="_Cq6_WUByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_C8gekUByEeKtXr-ioGRIjQ" name="rs" visibility="package" type="_Cq6_WkByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_C8qPkEByEeKtXr-ioGRIjQ" name="flag" visibility="package">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_C8qPkUByEeKtXr-ioGRIjQ"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_C8qPkkByEeKtXr-ioGRIjQ" name="rs1" visibility="package" type="_Cq6_WkByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_C8zZgEByEeKtXr-ioGRIjQ" name="pstmt1" visibility="package" type="_Cq6_WUByEeKtXr-ioGRIjQ"/>
+          <ownedOperation xmi:id="_C8zZgUByEeKtXr-ioGRIjQ" name="viewMails" visibility="public">
+            <ownedParameter xmi:id="_C8zZgkByEeKtXr-ioGRIjQ" name="mailsTO" type="_Cq6_bUByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_C8zZg0ByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C8zZhEByEeKtXr-ioGRIjQ" name="mailContacts" visibility="public">
+            <ownedParameter xmi:id="_C8zZhUByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C89KgEByEeKtXr-ioGRIjQ" name="sendMail" visibility="public">
+            <ownedParameter xmi:id="_C89KgUByEeKtXr-ioGRIjQ" name="mail" type="_Cq6_bUByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_C89KgkByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C89Kg0ByEeKtXr-ioGRIjQ" name="ApproveLicenseMSG" visibility="public">
+            <ownedParameter xmi:id="_C89KhEByEeKtXr-ioGRIjQ" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C89KhUByEeKtXr-ioGRIjQ" name="frommailid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C89KhkByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C89Kh0ByEeKtXr-ioGRIjQ" name="RejectLicenseMSG" visibility="public">
+            <ownedParameter xmi:id="_C89KiEByEeKtXr-ioGRIjQ" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C89KiUByEeKtXr-ioGRIjQ" name="frommailid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C89KikByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C89Ki0ByEeKtXr-ioGRIjQ" name="viewMail" visibility="public">
+            <ownedParameter xmi:id="_C89KjEByEeKtXr-ioGRIjQ" name="msgid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C89KjUByEeKtXr-ioGRIjQ" name="mailbox">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C89KjkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_CpbxkUByEeKtXr-ioGRIjQ" name="StateDaoImpl">
+          <generalization xmi:id="_C9G7gEByEeKtXr-ioGRIjQ" general="_CplikUByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_C9G7gUByEeKtXr-ioGRIjQ" name="con" visibility="package" type="_Cq6_WEByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_C9G7gkByEeKtXr-ioGRIjQ" name="pstmt" visibility="package" type="_Cq6_WUByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_C9QFcEByEeKtXr-ioGRIjQ" name="stmt" visibility="package" type="_Cq6_aUByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_C9QFcUByEeKtXr-ioGRIjQ" name="rs" visibility="package" type="_Cq6_WkByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_C9Z2cEByEeKtXr-ioGRIjQ" name="pstmt2" visibility="package" type="_Cq6_WUByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_C9Z2cUByEeKtXr-ioGRIjQ" name="pstmt1" visibility="package" type="_Cq6_WUByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_C9Z2ckByEeKtXr-ioGRIjQ" name="rs1" visibility="package" type="_Cq6_WkByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_C9jncEByEeKtXr-ioGRIjQ" name="rs2" visibility="package" type="_Cq6_WkByEeKtXr-ioGRIjQ"/>
+          <ownedOperation xmi:id="_C9jncUByEeKtXr-ioGRIjQ" name="AddState" visibility="public">
+            <ownedParameter xmi:id="_C9jnckByEeKtXr-ioGRIjQ" name="pt" type="_Cq6_ZEByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_C9jnc0ByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C9jndEByEeKtXr-ioGRIjQ" name="ViewState" visibility="public">
+            <ownedParameter xmi:id="_C9jndUByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C9sxYEByEeKtXr-ioGRIjQ" name="AddDistrict" visibility="public">
+            <ownedParameter xmi:id="_C9sxYUByEeKtXr-ioGRIjQ" name="pt" type="_Cq6_ZEByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_C9sxYkByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C9sxY0ByEeKtXr-ioGRIjQ" name="ViewDistrict" visibility="public">
+            <ownedParameter xmi:id="_C9sxZEByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C9sxZUByEeKtXr-ioGRIjQ" name="ViewDistrict" visibility="public">
+            <ownedParameter xmi:id="_C9sxZkByEeKtXr-ioGRIjQ" name="statename">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C9sxZ0ByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C9sxaEByEeKtXr-ioGRIjQ" name="ViewStateName" visibility="public">
+            <ownedParameter xmi:id="_C9sxaUByEeKtXr-ioGRIjQ" name="stateid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C9sxakByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C92iYEByEeKtXr-ioGRIjQ" name="ViewDistrict" visibility="public">
+            <ownedParameter xmi:id="_C92iYUByEeKtXr-ioGRIjQ" name="stateid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C92iYkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C92iY0ByEeKtXr-ioGRIjQ" name="AddCity" visibility="public">
+            <ownedParameter xmi:id="_C92iZEByEeKtXr-ioGRIjQ" name="pt" type="_Cq6_ZEByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_C92iZUByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_C9_sUEByEeKtXr-ioGRIjQ" name="ViewCity" visibility="public">
+            <ownedParameter xmi:id="_C9_sUUByEeKtXr-ioGRIjQ" name="districtname">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_C9_sUkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_CpbxkkByEeKtXr-ioGRIjQ" name="PoliceDaoImpl">
+          <generalization xmi:id="_C9_sU0ByEeKtXr-ioGRIjQ" general="_CplikUByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_C-JdUEByEeKtXr-ioGRIjQ" name="con" visibility="package" type="_Cq6_WEByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_C-TOUEByEeKtXr-ioGRIjQ" name="pstmt" visibility="package" type="_Cq6_WUByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_C-mJQEByEeKtXr-ioGRIjQ" name="pstmt1" visibility="package" type="_Cq6_WUByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_C-5EMEByEeKtXr-ioGRIjQ" name="pstmt2" visibility="package" type="_Cq6_WUByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_C_L_IEByEeKtXr-ioGRIjQ" name="rs" visibility="package" type="_Cq6_WkByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_C_fhIEByEeKtXr-ioGRIjQ" name="rs1" visibility="package" type="_Cq6_WkByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_C_ycEEByEeKtXr-ioGRIjQ" name="rs2" visibility="package" type="_Cq6_WkByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_C_8NEEByEeKtXr-ioGRIjQ" name="flag" visibility="package">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_C_8NEUByEeKtXr-ioGRIjQ"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_DAYR8EByEeKtXr-ioGRIjQ" name="psid" visibility="package">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_DAYR8UByEeKtXr-ioGRIjQ"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_DArz8EByEeKtXr-ioGRIjQ" name="deptid" visibility="package">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_DArz8UByEeKtXr-ioGRIjQ"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_DA094EByEeKtXr-ioGRIjQ" name="fis" visibility="package" type="_Cq6_U0ByEeKtXr-ioGRIjQ"/>
+          <ownedOperation xmi:id="_DA-u4EByEeKtXr-ioGRIjQ" name="AddPoliceStation" visibility="public">
+            <ownedParameter xmi:id="_DA-u4UByEeKtXr-ioGRIjQ" name="pt" type="_Cq6_ZEByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_DA-u4kByEeKtXr-ioGRIjQ" name="po" type="_Cq6_Y0ByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_DA-u40ByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DBIf4EByEeKtXr-ioGRIjQ" name="ViewPoliceStationName" visibility="public">
+            <ownedParameter xmi:id="_DBIf4UByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DBRp0EByEeKtXr-ioGRIjQ" name="AddDepartment" visibility="public">
+            <ownedParameter xmi:id="_DBRp0UByEeKtXr-ioGRIjQ" name="po" type="_Cq6_Y0ByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_DBRp0kByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DBba0EByEeKtXr-ioGRIjQ" name="ViewPoliceStationName" visibility="public">
+            <ownedParameter xmi:id="_DBba0UByEeKtXr-ioGRIjQ" name="distname">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DBba0kByEeKtXr-ioGRIjQ" name="statename">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DBba00ByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DBkkwEByEeKtXr-ioGRIjQ" name="ViewDepartmentName" visibility="public">
+            <ownedParameter xmi:id="_DBkkwUByEeKtXr-ioGRIjQ" name="stationname">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DBkkwkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DBuVwEByEeKtXr-ioGRIjQ" name="AddFir" visibility="public">
+            <ownedParameter xmi:id="_DBuVwUByEeKtXr-ioGRIjQ" name="pt" type="_Cq6_ZEByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_DBuVwkByEeKtXr-ioGRIjQ" name="po" type="_Cq6_Y0ByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_DBuVw0ByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DB4GwEByEeKtXr-ioGRIjQ" name="ViewFirId" visibility="public">
+            <ownedParameter xmi:id="_DB4GwUByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DCBQsEByEeKtXr-ioGRIjQ" name="AddChargesheet" visibility="public">
+            <ownedParameter xmi:id="_DCBQsUByEeKtXr-ioGRIjQ" name="po" type="_Cq6_Y0ByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_DCBQskByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DCLBsEByEeKtXr-ioGRIjQ" name="ViewPoliceStation" visibility="public">
+            <ownedParameter xmi:id="_DCLBsUByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DCUysEByEeKtXr-ioGRIjQ" name="ViewDepartmentName" visibility="public">
+            <ownedParameter xmi:id="_DCUysUByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DCd8oEByEeKtXr-ioGRIjQ" name="ViewDepartmentWiseEmployee" visibility="public">
+            <ownedParameter xmi:id="_DCd8oUByEeKtXr-ioGRIjQ" name="po" type="_Cq6_Y0ByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_DCd8okByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XUByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DCntoEByEeKtXr-ioGRIjQ" name="ViewPoliceStationDetails" visibility="public">
+            <ownedParameter xmi:id="_DCntoUByEeKtXr-ioGRIjQ" name="psid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DCntokByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XUByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DCw3kEByEeKtXr-ioGRIjQ" name="UpdatePolicestation" visibility="public">
+            <ownedParameter xmi:id="_DCw3kUByEeKtXr-ioGRIjQ" name="po" type="_Cq6_Y0ByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_DCw3kkByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DC6okEByEeKtXr-ioGRIjQ" name="AddCitizenLicense" visibility="public">
+            <ownedParameter xmi:id="_DC6okUByEeKtXr-ioGRIjQ" name="po" type="_Cq6_Y0ByEeKtXr-ioGRIjQ"/>
+            <ownedParameter xmi:id="_DC6okkByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DDEZkEByEeKtXr-ioGRIjQ" name="ViewLicenseRequest" visibility="public">
+            <ownedParameter xmi:id="_DDEZkUByEeKtXr-ioGRIjQ" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DDEZkkByEeKtXr-ioGRIjQ" name="storepath">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DDEZk0ByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DDNjgEByEeKtXr-ioGRIjQ" name="ApproveLicense" visibility="public">
+            <ownedParameter xmi:id="_DDNjgUByEeKtXr-ioGRIjQ" name="lid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DDNjgkByEeKtXr-ioGRIjQ" name="frommailid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DDNjg0ByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DDXUgEByEeKtXr-ioGRIjQ" name="RejectLicense" visibility="public">
+            <ownedParameter xmi:id="_DDXUgUByEeKtXr-ioGRIjQ" name="lid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DDXUgkByEeKtXr-ioGRIjQ" name="frommailid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DDXUg0ByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DDhFgEByEeKtXr-ioGRIjQ" name="ViewPoliceStation" visibility="public">
+            <ownedParameter xmi:id="_DDhFgUByEeKtXr-ioGRIjQ" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DDhFgkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DDqPcEByEeKtXr-ioGRIjQ" name="ViewPoliceStationByemp" visibility="public">
+            <ownedParameter xmi:id="_DDqPcUByEeKtXr-ioGRIjQ" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DDqPckByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DD0AcEByEeKtXr-ioGRIjQ" name="ViewPoliceStationid" visibility="public">
+            <ownedParameter xmi:id="_DD0AcUByEeKtXr-ioGRIjQ" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DD0AckByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DD9KYEByEeKtXr-ioGRIjQ" name="ViewLawOrderDepartment" visibility="public">
+            <ownedParameter xmi:id="_DD9KYUByEeKtXr-ioGRIjQ" name="stationname">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DD9KYkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DEG7YEByEeKtXr-ioGRIjQ" name="ViewWomenProtectionDepartment" visibility="public">
+            <ownedParameter xmi:id="_DEG7YUByEeKtXr-ioGRIjQ" name="stationname">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DEG7YkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DEQsYEByEeKtXr-ioGRIjQ" name="ViewCyberDepartment" visibility="public">
+            <ownedParameter xmi:id="_DEQsYUByEeKtXr-ioGRIjQ" name="stationname">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DEQsYkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DEZ2UEByEeKtXr-ioGRIjQ" name="ViewTrafficControlDepartment" visibility="public">
+            <ownedParameter xmi:id="_DEZ2UUByEeKtXr-ioGRIjQ" name="stationname">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DEZ2UkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DEjnUEByEeKtXr-ioGRIjQ" name="ViewCbiDepartment" visibility="public">
+            <ownedParameter xmi:id="_DEjnUUByEeKtXr-ioGRIjQ" name="stationname">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DEjnUkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DEtYUEByEeKtXr-ioGRIjQ" name="ViewPoliceStationName" visibility="public">
+            <ownedParameter xmi:id="_DEtYUUByEeKtXr-ioGRIjQ" name="cityname">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DEtYUkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DE2iQEByEeKtXr-ioGRIjQ" name="ViewPoliceStationInState" visibility="public">
+            <ownedParameter xmi:id="_DE2iQUByEeKtXr-ioGRIjQ" name="districtid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DE2iQkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DFATQEByEeKtXr-ioGRIjQ" name="ViewSIProfile" visibility="public">
+            <ownedParameter xmi:id="_DFATQUByEeKtXr-ioGRIjQ" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DFATQkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XUByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DFJdMEByEeKtXr-ioGRIjQ" name="ViewDepartmentNameForCBIFir" visibility="public">
+            <ownedParameter xmi:id="_DFJdMUByEeKtXr-ioGRIjQ" name="stationname">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DFJdMkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DFTOMEByEeKtXr-ioGRIjQ" name="ViewDepartmentNameForCyberFir" visibility="public">
+            <ownedParameter xmi:id="_DFTOMUByEeKtXr-ioGRIjQ" name="stationname">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DFTOMkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DFc_MEByEeKtXr-ioGRIjQ" name="ViewDepartmentNameForTrafficControlFir" visibility="public">
+            <ownedParameter xmi:id="_DFc_MUByEeKtXr-ioGRIjQ" name="stationname">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DFc_MkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DFmJIEByEeKtXr-ioGRIjQ" name="ViewDepartmentNameForWomenFir" visibility="public">
+            <ownedParameter xmi:id="_DFmJIUByEeKtXr-ioGRIjQ" name="stationname">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DFmJIkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DFv6IEByEeKtXr-ioGRIjQ" name="ViewPoliceStationforcriminal" visibility="public">
+            <ownedParameter xmi:id="_DFv6IUByEeKtXr-ioGRIjQ" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DFv6IkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XkByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DF5rIEByEeKtXr-ioGRIjQ" name="ViewSPProfile" visibility="public">
+            <ownedParameter xmi:id="_DF5rIUByEeKtXr-ioGRIjQ" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DF5rIkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_XUByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_CplikUByEeKtXr-ioGRIjQ" name="AbstractDataAccessObject">
+          <ownedAttribute xmi:id="_DGC1EEByEeKtXr-ioGRIjQ" name="mCon" visibility="private" type="_Cq6_WEByEeKtXr-ioGRIjQ"/>
+          <ownedAttribute xmi:id="_DGC1EUByEeKtXr-ioGRIjQ" name="mProps" visibility="private" isStatic="true" type="_Cq6_c0ByEeKtXr-ioGRIjQ"/>
+          <ownedOperation xmi:id="_DGC1EkByEeKtXr-ioGRIjQ" name="getProperties" visibility="public">
+            <ownedComment xmi:id="_DGC1FEByEeKtXr-ioGRIjQ">
+              <body>/** 
+ * @return the props
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_DGC1E0ByEeKtXr-ioGRIjQ" name="return" type="_Cq6_c0ByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DGC1FUByEeKtXr-ioGRIjQ" name="setProperties" visibility="public">
+            <ownedComment xmi:id="_DGMmEEByEeKtXr-ioGRIjQ">
+              <body>/** 
+ * @param propsapplication properties object
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_DGC1FkByEeKtXr-ioGRIjQ" name="aProps" type="_Cq6_c0ByEeKtXr-ioGRIjQ"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DGMmEUByEeKtXr-ioGRIjQ" name="getConnection" visibility="public">
+            <ownedParameter xmi:id="_DGMmEkByEeKtXr-ioGRIjQ" name="return" type="_Cq6_WEByEeKtXr-ioGRIjQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DGMmE0ByEeKtXr-ioGRIjQ" name="getSequenceID" visibility="public">
+            <ownedParameter xmi:id="_DGMmFEByEeKtXr-ioGRIjQ" name="tableName">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DGMmFUByEeKtXr-ioGRIjQ" name="pkid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_DGMmFkByEeKtXr-ioGRIjQ" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_Cq6_UEByEeKtXr-ioGRIjQ" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_Cq6_UUByEeKtXr-ioGRIjQ" name="io">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_UkByEeKtXr-ioGRIjQ" name="File"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_U0ByEeKtXr-ioGRIjQ" name="FileInputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_VEByEeKtXr-ioGRIjQ" name="FileOutputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_VUByEeKtXr-ioGRIjQ" name="OutputStream"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Cq6_VkByEeKtXr-ioGRIjQ" name="sql">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_V0ByEeKtXr-ioGRIjQ" name="Blob"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_WEByEeKtXr-ioGRIjQ" name="Connection"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_WUByEeKtXr-ioGRIjQ" name="PreparedStatement"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_WkByEeKtXr-ioGRIjQ" name="ResultSet"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_W0ByEeKtXr-ioGRIjQ" name="SQLException"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_aEByEeKtXr-ioGRIjQ" name="CallableStatement"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_aUByEeKtXr-ioGRIjQ" name="Statement"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_akByEeKtXr-ioGRIjQ" name="Types"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_ckByEeKtXr-ioGRIjQ" name="DriverManager"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Cq6_XEByEeKtXr-ioGRIjQ" name="util">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_XUByEeKtXr-ioGRIjQ" name="ArrayList"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_XkByEeKtXr-ioGRIjQ" name="Vector"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Cq6_c0ByEeKtXr-ioGRIjQ" name="Properties"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>
